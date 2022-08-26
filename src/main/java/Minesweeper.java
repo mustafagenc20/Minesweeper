@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Minesweeper {
-    int rowNumber, colNumber;
+    int rowNumber, colNumber, size;
     int[][] map;
     int[][] board;
 
@@ -13,6 +13,22 @@ public class Minesweeper {
         this.colNumber = colNumber;
         this.map = new int[rowNumber][colNumber];
         this.board = new int[rowNumber][colNumber];
+        this.size = rowNumber * colNumber;
+    }
 
+    public void run(){
+
+    }
+
+    public void prepareGame(){
+        int randomRow, randomColumn, count = 0;
+        while(count != (size / 4)){
+            randomRow =random.nextInt(rowNumber);
+            randomColumn =random.nextInt(colNumber);
+            if(map[randomRow][randomColumn] != -1){
+                map[randomRow][randomColumn] = -1;
+                count++;
+            }
+        }
     }
 }
