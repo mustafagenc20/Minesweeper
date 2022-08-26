@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -7,11 +5,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int row, column;
         System.out.println("Welcome to Minesweeper");
-        System.out.println("Type your board size");
+/*        System.out.println("Type your board size");
         System.out.println("Row size");
         row = scanner.nextInt();
         System.out.println("Column size");
-        column = scanner.nextInt();
-        Minesweeper minesweeper = new Minesweeper(row, column);
+        column = scanner.nextInt();*/
+        Minesweeper minesweeper = new Minesweeper(row = 5, column = 5);
+        minesweeper.run();
     }
 }
