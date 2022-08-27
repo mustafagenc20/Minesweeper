@@ -10,7 +10,7 @@ public class Main {
         row = scanner.nextInt();
         System.out.println("Column size");
         column = scanner.nextInt();*/
-        Minesweeper minesweeper = new Minesweeper(row = 5, column = 5);
+        Minesweeper minesweeper = new Minesweeper(row = 2, column = 2);
         minesweeper.run();
     }
 }
